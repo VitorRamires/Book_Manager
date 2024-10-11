@@ -51,7 +51,7 @@ export function Authors() {
               </ItemModal>
               <ItemModal>
                 <label htmlFor="email">Email</label>
-                <input id="email" type="email" {...register("email")} />
+                <input id="email" type="email" {...register("email", { required: true })} />
               </ItemModal>
               <ModalActions>
                 <button>Criar</button>
