@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 # CRUD-react
 # crud_react
 # crud_react
+# crud_react
