@@ -12,10 +12,18 @@ export const GlobalCss = createGlobalStyle`
     width: 100%;
     height: 100%;
   }
+
+  body{
+    height: 100vh;
+    background-color: #0B1B1F;
+  }
 `;
 
 export const Center = styled.div`
   width: 1560px;
   max-width: 90%;
-  margin: 35px auto;
+  margin: 75px auto;
+  background-color: #0D2025;
+  padding:25px;
+  border-radius: 10px;
 `;

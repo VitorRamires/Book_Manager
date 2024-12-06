@@ -31,10 +31,6 @@ export const DialogTrigger = styled(Dialog.Trigger)`
   cursor: pointer;
   border-radius: 5px;
   transition: 0.2s;
-
-  &:hover {
-    background-color: rgb(255, 210, 210);
-  }
 `;
 
 export const ModalActions = styled.div`

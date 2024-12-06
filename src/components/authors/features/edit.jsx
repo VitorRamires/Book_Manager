@@ -82,7 +82,7 @@ export function Edit({ authorIdEdit }) {
               <ModalActions>
                 <button>Editar</button>
                 <Dialog.Close asChild>
-                  <button>Cancelar</button>
+                  <button>CANCELAR</button>
                 </Dialog.Close>
               </ModalActions>
             </form>

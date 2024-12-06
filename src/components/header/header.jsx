@@ -1,12 +1,16 @@
 import { NavLink } from "react-router-dom";
-import { NavHeader } from "./header";
+import { NavHeader, NavBox } from "./header";
 
 export function Header() {
   return (
     <>
       <NavHeader>
-        <NavLink to="/">Livros</NavLink>
-        <NavLink to="/autores">Autores</NavLink>
+        <h3>Gerenciador de livros</h3>
+
+        <NavBox>
+          <NavLink to="/">Livros</NavLink>
+          <NavLink to="/autores">Autores</NavLink>
+        </NavBox>
       </NavHeader>
     </>
   );

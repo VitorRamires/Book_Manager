@@ -28,10 +28,10 @@ export function Livros() {
 
   return (
     <Center>
-      <h1>Livros</h1>
-
       <Dialog.Root>
-        <DialogTrigger>Criar Livro</DialogTrigger>
+        <DialogTrigger>
+          Criar Livro <span>+</span>
+        </DialogTrigger>
         <DialogOverlay>
           <ModalBox>
             <Dialog.Title>Crie seu livro</Dialog.Title>
@@ -75,9 +75,9 @@ export function Livros() {
                 </SelectAuthors>
               </ItemModal>
               <ModalActions>
-                <button>Criar</button>
+                <button>CRIAR</button>
                 <Dialog.Close asChild>
-                  <button>Cancelar</button>
+                  <button>CANCELAR</button>
                 </Dialog.Close>
               </ModalActions>
             </form>

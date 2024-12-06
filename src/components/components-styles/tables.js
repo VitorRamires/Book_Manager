@@ -16,20 +16,21 @@ export const ModalBox = styled(Dialog.Content)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 350px;
+  width: 400px;
   max-width: 100%;
-  background-color: #ffff;
-  padding: 20px;
+  background: linear-gradient(180deg, #226374, #226374, #388a9f);
+  padding: 30px;
   border-radius: 5px;
   max-height: 90%;
   overflow-y: auto;
+  color: #ffffff;
 `;
 
 export const DialogTrigger = styled(Dialog.Trigger)`
-  width: 150px;
+  width: 170px;
   font-size: 1.2rem;
-  padding: 7px 4px;
-  background-color: rgb(12, 34, 107);
+  height: 60px;
+  background-color: #47afca;
   color: #ffff;
   outline: none;
   border: none;
@@ -37,9 +38,17 @@ export const DialogTrigger = styled(Dialog.Trigger)`
   margin: 20px 0 50px 0;
   cursor: pointer;
   transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 
   &:hover {
-    background-color: rgb(23, 60, 184);
+    background-color: #2e6b7b;
+  }
+  span {
+    font-size: 2rem;
+    transition: 0.2s;
   }
 `;
 
@@ -51,18 +60,20 @@ export const ItemModal = styled.div`
   justify-content: center;
   gap: 5px;
   width: 100%;
-  margin: 20px 0;
+  margin: 40px 0;
 
   input {
     width: 90%;
-    padding: 10px 5px;
-    border: 1px solid #cecece;
+    padding: 15px 9px;
+    border: 1px solid transparent;
     outline: none;
     border-radius: 5px;
     margin-top: 5px;
+    background-color: #34798a;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
     &:focus {
-      border-color: rgb(23, 60, 184) !important;
+      border-color: #59d6f8 !important;
     }
   }
 `;
@@ -77,7 +88,7 @@ export const ModalActions = styled.div`
     width: 100px;
     padding: 10px 5px;
     cursor: pointer;
-    background-color: rgb(47, 83, 202);
+    background-color: #47afca;
     outline: none;
     border: none;
     border-radius: 5px;
@@ -86,17 +97,18 @@ export const ModalActions = styled.div`
     transition: 0.2s;
 
     &:hover {
-      background-color: rgb(42, 91, 250);
+      background-color: #0abdec;
+    }
+  }
+  
+  button:last-child {
+    background-color: #ff4848;
+    transition: 0.1s;
+
+    &:hover {
+      background-color: #fd0000;
     }
 
-    &:last-child {
-      background-color: rgb(206, 59, 59);
-      transition: 0.2s;
-
-      &:hover {
-        background-color: rgb(255, 55, 55);
-      }
-    }
   }
 `;
 
@@ -106,37 +118,46 @@ export const TableWrapper = styled.div`
 `;
 
 export const TableBox = styled.table`
-  width: 950px;
+  width: 100%;
   border-collapse: collapse;
 
   table,
   th,
   td {
-    border: 1px solid;
     text-align: start;
     padding: 5px;
   }
 
   thead tr {
-    background-color: rgb(211, 211, 211);
+    background-color: #343434;
     font-size: 1.2rem;
+    color: #ffffff;
   }
 
   tr {
     width: 100%;
   }
 
+  tbody {
+    border-top: 15px solid #0d2025;
+  }
+
+  tbody tr {
+    border-top: 10px solid #0d2025;
+    color: #ffffff;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #286373;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #1d4651;
+  }
+
   td {
     padding: 15px;
     position: relative;
-  }
-
-  td:not(thead td) {
-    border-top: none;
-    border-left: none;
-  }
-  tbody tr td:first-child {
-    border-left: 1px solid rgb(33 33 33);
   }
 `;
 
@@ -144,21 +165,28 @@ export const Actions = styled.td`
   display: flex;
   align-items: stretch;
   justify-content: start;
-  gap: 10px;
+  gap: 20px;
 
   img {
     width: 30px;
     height: 30px;
+    transition: 0.1s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 
 export const SelectAuthors = styled.select`
   width: 90%;
-  padding: 10px;
+  padding: 15px 9px;
   outline: none;
-  border: 1px solid #cecece;
   border-radius: 5px;
   margin-top: 5px;
+  background-color: #34798a;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: 0;
 
   &:focus {
     border-color: rgb(23, 60, 184) !important;

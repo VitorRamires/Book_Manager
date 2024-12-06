@@ -34,9 +34,10 @@ export function Authors() {
 
   return (
     <Center>
-      <h1>Autores</h1>
       <Dialog.Root>
-        <DialogTrigger onClick={resetForm}>Criar Autor</DialogTrigger>
+        <DialogTrigger onClick={resetForm}>
+          Criar Autor <span>+</span>
+        </DialogTrigger>
         <DialogOverlay>
           <ModalBox>
             <Dialog.Title>Crie seu autor</Dialog.Title>
@@ -51,12 +52,16 @@ export function Authors() {
               </ItemModal>
               <ItemModal>
                 <label htmlFor="email">Email</label>
-                <input id="email" type="email" {...register("email", { required: true })} />
+                <input
+                  id="email"
+                  type="email"
+                  {...register("email", { required: true })}
+                />
               </ItemModal>
               <ModalActions>
-                <button>Criar</button>
+                <button>CRIAR</button>
                 <Dialog.Close asChild>
-                  <button>Cancelar</button>
+                  <button>CANCELAR</button>
                 </Dialog.Close>
               </ModalActions>
               <AlreadyCreated>{authorNotExistMessage}</AlreadyCreated>
