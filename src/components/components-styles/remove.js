@@ -23,6 +23,7 @@ export const ModalBox = styled(Dialog.Content)`
   max-height: 90%;
   overflow-y: auto;
   color: #ffffff;
+  font-family: "Inter";
 `;
 
 export const DialogDescription = styled(Dialog.Description)`

@@ -23,7 +23,7 @@ export const GlobalCss = createGlobalStyle`
 `;
 
 export const Center = styled.div`
-  width: 1560px;
+  width: 1360px;
   max-width: 90%;
   margin: 75px auto;
   background-color: #0d2025;

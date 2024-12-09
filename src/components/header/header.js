@@ -5,7 +5,7 @@ export const NavHeader = styled.nav`
   background-color: #132e35;
   box-shadow: 0 13px 14.4px 0 rgba(0, 0, 0, 0.25);
   font-size: 1.5rem;
-  padding: 5px 25px;
+  padding: 5px 0;
   color: #ffffff;
 
 
@@ -43,6 +43,13 @@ export const NavHeader = styled.nav`
     color: #ffffff;
   }
 `;
+
+export const Menu = styled.div`
+  width: 1360px;
+  max-width: 90%;
+  margin:0 auto;
+  text-align: start;
+`
 
 
 export const NavBox = styled.div` 

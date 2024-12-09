@@ -78,11 +78,13 @@ export const ItemModal = styled.div`
     margin-top: 5px;
     background-color: #34798a;
     font-family: "Inter";
+    color: #e8e8e8;
 
     &:focus {
       border-color: #59d6f8;
       background-color: #47afca;
       box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      color: #282828;
     }
   }
 `;
@@ -198,11 +200,13 @@ export const SelectAuthors = styled.select`
   background-color: #34798a;
   font-family: "Inter", sans-serif;
   border: 1px solid #0000001c;
+  color: #e8e8e8;
 
   &:focus {
     border-color: #59d6f8;
     background-color: #47afca;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: #282828;
   }
 
 `;

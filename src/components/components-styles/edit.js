@@ -25,10 +25,11 @@ export const ModalBox = styled(Dialog.Content)`
   color: #ffffff;
   font-family: "Inter";
 
-  h2{
+   h2{
     font-family: "Itim";
   }
 `;
+
 
 export const DialogTrigger = styled(Dialog.Trigger)`
   background-color: transparent;
@@ -57,15 +58,17 @@ export const ItemModal = styled.div`
     border-radius: 5px;
     margin-top: 5px;
     background-color: #34798a;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    font-family: "Inter";
+    color: #e8e8e8;
 
     &:focus {
       border-color: #59d6f8;
       background-color: #47afca;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      color: #282828;
     }
   }
 `;
-
 export const ModalActions = styled.div`
   display: flex;
   gap: 10px;
@@ -101,6 +104,7 @@ export const ModalActions = styled.div`
   }
 `;
 
+
 export const SelectAuthors = styled.select`
   width: 90%;
   padding: 15px 9px;
@@ -108,11 +112,15 @@ export const SelectAuthors = styled.select`
   border-radius: 5px;
   margin-top: 5px;
   background-color: #34798a;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  border: 0;
+  font-family: "Inter", sans-serif;
+  border: 1px solid #0000001c;
+  color: #e8e8e8;
 
   &:focus {
-    border-color: rgb(23, 60, 184) !important;
+    border-color: #59d6f8;
     background-color: #47afca;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: #282828;
   }
+
 `;

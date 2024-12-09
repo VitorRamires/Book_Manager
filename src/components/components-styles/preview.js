@@ -23,7 +23,14 @@ export const ModalBox = styled(Dialog.Content)`
   max-height: 90%;
   overflow-y: auto;
   color: #ffffff;
+  font-family: "Inter";
+
+   h2{
+    font-family: "Itim";
+  }
+
 `;
+
 
 export const DialogTrigger = styled(Dialog.Trigger)`
   display: flex;
@@ -48,6 +55,13 @@ export const ItemModal = styled.div`
   margin: 25px 0;
   padding: 10px 15px;
   border-radius: 5px;
+
+  h3{
+    font-family: "Itim";
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+
   p {
     font-size: 0.95rem;
   }
@@ -58,7 +72,6 @@ export const DialogTitle = styled(Dialog.Title)`
 `;
 
 export const ViewInfo = styled.div`
-  padding: 5px 0 25px 0;
   margin: 10px 0;
 
   div:nth-child(odd) {
