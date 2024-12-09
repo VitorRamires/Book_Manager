@@ -15,13 +15,14 @@ export const ModalBox = styled(Dialog.Content)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 350px;
+  width: 400px;
   max-width: 100%;
-  background-color: #ffff;
-  padding: 20px;
+  background: linear-gradient(180deg, #226374, #226374, #388a9f);
+  padding: 30px;
   border-radius: 5px;
   max-height: 90%;
   overflow-y: auto;
+  color: #ffffff;
 `;
 
 export const DialogTrigger = styled(Dialog.Trigger)`
@@ -45,14 +46,8 @@ export const ItemModal = styled.div`
   gap: 5px;
   width: 100%;
   margin: 25px 0;
-
-  input {
-    width: 90%;
-    padding: 10px 5px;
-    border: 1px solid #cecece;
-    border-radius: 5px;
-  }
-
+  padding: 10px 15px;
+  border-radius: 5px;
   p {
     font-size: 0.95rem;
   }
@@ -63,10 +58,16 @@ export const DialogTitle = styled(Dialog.Title)`
 `;
 
 export const ViewInfo = styled.div`
-  padding: 5px 25px 25px 25px;
-  background-color: rgb(245, 245, 245);
+  padding: 5px 0 25px 0;
   margin: 10px 0;
-  border-radius: 5px;
+
+  div:nth-child(odd) {
+    background-color: #489fb6;
+  }
+
+  div:nth-child(even) {
+    background-color: #1d4651;
+  }
 `;
 
 export const ModalActions = styled.div`
@@ -80,15 +81,16 @@ export const ModalActions = styled.div`
     width: 100px;
     padding: 10px 5px;
     cursor: pointer;
-    background-color: rgb(228, 228, 228);
+    background-color: #ff4848;
     transition: 0.2s;
     border: none;
     border-radius: 5px;
-    color: #000000;
-    font-weight: bold;
+    color: #fff;
+    font-weight: regular;
+    font-size: 1.05rem;
 
     &:hover {
-      background-color: rgb(215, 215, 215);
+      background-color: #fd0000;
     }
   }
 `;

@@ -15,13 +15,18 @@ export const ModalBox = styled(Dialog.Content)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 350px;
+  width: 400px;
   max-width: 100%;
-  background-color: #ffff;
-  padding: 20px;
+  background: linear-gradient(180deg, #226374, #226374, #388a9f);
+  padding: 30px;
   border-radius: 5px;
   max-height: 90%;
   overflow-y: auto;
+  color: #ffffff;
+`;
+
+export const DialogDescription = styled(Dialog.Description)`
+  margin-top: 10px;
 `;
 
 export const DialogTrigger = styled(Dialog.Trigger)`
@@ -44,16 +49,17 @@ export const ModalActions = styled.div`
     width: 100px;
     padding: 10px 5px;
     cursor: pointer;
-    background-color: rgb(206, 59, 59);
+    background-color: #47afca;
     outline: none;
     border: none;
     border-radius: 5px;
     color: #ffffff;
-    font-weight: bold;
+    font-weight: regular;
     transition: 0.2s;
+    font-size: 1.05rem;
 
     &:hover {
-      background-color: rgb(255, 55, 55);
+      background-color: #0abdec;
     }
 
     &:disabled {
@@ -63,12 +69,12 @@ export const ModalActions = styled.div`
     }
 
     &:last-child {
-      background-color: rgb(228, 228, 228);
-      color: #000000;
+      background-color: #ff4848;
+      color: #ffffff;
       transition: 0.2s;
 
       &:hover {
-        background-color: rgb(215, 215, 215);
+        background-color: #fd0000;
       }
     }
   }
@@ -76,5 +82,5 @@ export const ModalActions = styled.div`
 
 export const Span = styled.span`
   font-size: 1.2rem;
-  color: #ff5858;
+  color: #fff;
 `;

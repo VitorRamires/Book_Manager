@@ -24,11 +24,16 @@ export const ModalBox = styled(Dialog.Content)`
   max-height: 90%;
   overflow-y: auto;
   color: #ffffff;
+  font-family: "Inter";
+
+   h2{
+    font-family: "Itim";
+  }
 `;
 
 export const DialogTrigger = styled(Dialog.Trigger)`
   width: 170px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   height: 60px;
   background-color: #47afca;
   color: #ffff;
@@ -42,6 +47,7 @@ export const DialogTrigger = styled(Dialog.Trigger)`
   align-items: center;
   justify-content: center;
   gap: 10px;
+  font-family: "Itim";
 
   &:hover {
     background-color: #2e6b7b;
@@ -49,6 +55,7 @@ export const DialogTrigger = styled(Dialog.Trigger)`
   span {
     font-size: 2rem;
     transition: 0.2s;
+    margin-bottom: 5px;
   }
 `;
 
@@ -70,10 +77,12 @@ export const ItemModal = styled.div`
     border-radius: 5px;
     margin-top: 5px;
     background-color: #34798a;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    font-family: "Inter";
 
     &:focus {
-      border-color: #59d6f8 !important;
+      border-color: #59d6f8;
+      background-color: #47afca;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     }
   }
 `;
@@ -93,22 +102,23 @@ export const ModalActions = styled.div`
     border: none;
     border-radius: 5px;
     color: #ffffff;
-    font-weight: bold;
+    font-weight: regular;
     transition: 0.2s;
+    font-size: 1.05rem;
 
     &:hover {
       background-color: #0abdec;
     }
   }
-  
+
   button:last-child {
-    background-color: #ff4848;
+    background-color: #34798a;
     transition: 0.1s;
+    border: 1px solid #2c6d7d;
 
     &:hover {
-      background-color: #fd0000;
+      background-color: #2c6d7d;
     }
-
   }
 `;
 
@@ -120,6 +130,7 @@ export const TableWrapper = styled.div`
 export const TableBox = styled.table`
   width: 100%;
   border-collapse: collapse;
+  font-family:'inter';
 
   table,
   th,
@@ -185,12 +196,15 @@ export const SelectAuthors = styled.select`
   border-radius: 5px;
   margin-top: 5px;
   background-color: #34798a;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  border: 0;
+  font-family: "Inter", sans-serif;
+  border: 1px solid #0000001c;
 
   &:focus {
-    border-color: rgb(23, 60, 184) !important;
+    border-color: #59d6f8;
+    background-color: #47afca;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
+
 `;
 
 export const AlreadyCreated = styled.p`

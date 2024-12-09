@@ -11,6 +11,8 @@ export const NavHeader = styled.nav`
 
   h3{
     margin-top:50px;
+    font-family: "Itim";
+    font-size: 2.5rem;
   }
 
   a {
@@ -47,5 +49,6 @@ export const NavBox = styled.div`
 display: flex;
 align-items: center;
 justify-content: start;
+font-family: "Itim";
 
 `

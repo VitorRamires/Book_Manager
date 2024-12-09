@@ -60,12 +60,18 @@ export function Remove({ authorIdRemove }) {
               <Dialog.Description></Dialog.Description>
               <ModalActions>
                 <Dialog.Close asChild>
-                  <button disabled={existedAuthor} onClick={filterArray}>
-                    Sim
-                  </button>
+                  {existedAuthor ? (
+                    <button disabled={existedAuthor}>Deletar</button>
+                  ) : (
+                    <button onClick={filterArray}>Sim</button>
+                  )}
                 </Dialog.Close>
                 <Dialog.Close asChild>
-                  {existedAuthor ? <button>Sair</button> : <button>Não</button>}
+                  {existedAuthor ? (
+                    <button>Fechar</button>
+                  ) : (
+                    <button>Não</button>
+                  )}
                 </Dialog.Close>
               </ModalActions>
             </ModalBox>

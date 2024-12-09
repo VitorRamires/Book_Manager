@@ -101,7 +101,7 @@ export function Editar({ bookId }) {
                 <ModalActions>
                   <button onClick={handleSubmitEdit}>Editar</button>
                   <Dialog.Close asChild>
-                    <button>CANCELAR</button>
+                    <button>Cancelar</button>
                   </Dialog.Close>
                 </ModalActions>
               </form>

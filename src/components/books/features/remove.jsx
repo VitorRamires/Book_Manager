@@ -5,6 +5,7 @@ import {
   ModalBox,
   ModalActions,
   DialogTrigger,
+  DialogDescription
 } from "../../components-styles/remove";
 import removeLogo from "../../../img/trash.svg";
 import { useState, useContext } from "react";
@@ -37,13 +38,13 @@ export function Remove({ bookIdRemove }) {
         <DialogOverlay>
           <ModalBox>
             <Dialog.Title>Deseja remover o livro?</Dialog.Title>
-            <Dialog.Description></Dialog.Description>
+            <DialogDescription>Está Operação não poderá ser desfeita</DialogDescription>
             <ModalActions>
               <Dialog.Close asChild>
-                <button onClick={filterArray}>Sim</button>
+                <button>Não</button>
               </Dialog.Close>
               <Dialog.Close asChild>
-                <button>Não</button>
+                <button onClick={filterArray}>Sim</button>
               </Dialog.Close>
             </ModalActions>
           </ModalBox>

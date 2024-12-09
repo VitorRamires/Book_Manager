@@ -59,9 +59,9 @@ export function Authors() {
                 />
               </ItemModal>
               <ModalActions>
-                <button>CRIAR</button>
+                <button>Criar</button>
                 <Dialog.Close asChild>
-                  <button>CANCELAR</button>
+                  <button>Cancelar</button>
                 </Dialog.Close>
               </ModalActions>
               <AlreadyCreated>{authorNotExistMessage}</AlreadyCreated>
