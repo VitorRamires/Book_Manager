@@ -10,20 +10,11 @@ export function App() {
   return (
     <ContextAuthors>
       <ContextGlobal>
-        <BrowserRouter
-          future={{
-            v7_relativeSplatPath: true,
-          }}
-        >
+        <BrowserRouter>
           <Header />
           <Routes>
-            <Route path="/">
-              <Route path="/" element={<Livros />} />
-            </Route>
-
-            <Route path="/autores">
-              <Route path="/autores" element={<Authors />} />
-            </Route>
+            <Route path="/" element={<Livros />} />
+            <Route path="/autores" element={<Authors />} />
           </Routes>
           <GlobalCss />
         </BrowserRouter>
