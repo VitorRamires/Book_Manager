@@ -9,8 +9,8 @@ export function Header() {
           <h3>Gerenciador de livros</h3>
 
           <NavBox>
-            <NavLink to="/">Livros</NavLink>
-            <NavLink to="/autores">Autores</NavLink>
+            <NavLink to="../">Livros</NavLink>
+            <NavLink to="../autores">Autores</NavLink>
           </NavBox>
         </Menu>
       </NavHeader>
