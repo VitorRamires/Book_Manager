@@ -61,7 +61,12 @@ export function Preview({ bookIdPreview }) {
                 <h3>Páginas:</h3>
                 <p>{filterIdPreview.pages}</p>
               </ItemModal>
+              <ItemModal>
+                  <h3>Criado em:</h3>
+                  <p>{filterIdPreview.date}</p>
+              </ItemModal>
             </ViewInfo>
+            
             <ModalActions>
               <Dialog.Close asChild>
                 <button>Fechar</button>

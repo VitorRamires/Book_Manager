@@ -9,30 +9,30 @@ import {
 } from "../../components-styles/remove";
 import removeLogo from "../../../img/trash.svg";
 import { CreateGlobalAuthors } from "../../../context/globalContextAuthors";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export function Remove({ authorIdRemove }) {
   const [getAuthorIdRemove] = useState(authorIdRemove);
 
-  const { setAuthors } = useContext(CreateGlobalAuthors);
-  const [existedAuthor, setExistedAuthor] = useState();
+  const { setAuthors, setExistedAuthor, existedAuthor } =
+    useContext(CreateGlobalAuthors);
 
   const getBooks = JSON.parse(localStorage.getItem("books"));
   const arraySavedOnLocal = JSON.parse(localStorage.getItem("authors"));
 
   let actualItem = arraySavedOnLocal.filter(
-    (item) => item.authorId === getAuthorIdRemove
+    (author) => author.authorId === getAuthorIdRemove
   )[0];
 
   let removeArray = arraySavedOnLocal.filter(
-    (item) => item.authorId != actualItem.authorId
+    (author) => author.authorId != actualItem.authorId
   );
 
-  function verification() {
-    getBooks.find((item) => item.authorId == actualItem.authorId)
+  useEffect(() => {
+    getBooks.find((book) => book.authorId == actualItem.authorId)
       ? setExistedAuthor(true)
       : setExistedAuthor(false);
-  }
+  }, [actualItem.authorId, existedAuthor, getBooks, setExistedAuthor]);
 
   function filterArray() {
     if (!existedAuthor) {
@@ -45,7 +45,7 @@ export function Remove({ authorIdRemove }) {
     <>
       <Dialog.Root>
         <DialogTrigger>
-          <img src={removeLogo} alt="" title="Remover" onClick={verification} />
+          <img src={removeLogo} alt="" title="Remover" />
         </DialogTrigger>
         <Dialog.Portal>
           <DialogOverlay>
@@ -61,16 +61,16 @@ export function Remove({ authorIdRemove }) {
               <ModalActions>
                 <Dialog.Close asChild>
                   {existedAuthor ? (
-                    <button disabled={existedAuthor}>Deletar</button>
+                    <button>Fechar</button>
                   ) : (
-                    <button onClick={filterArray}>Sim</button>
+                    <button>Não</button>
                   )}
                 </Dialog.Close>
                 <Dialog.Close asChild>
                   {existedAuthor ? (
-                    <button>Fechar</button>
+                    ""
                   ) : (
-                    <button>Não</button>
+                    <button onClick={filterArray}>Sim</button>
                   )}
                 </Dialog.Close>
               </ModalActions>

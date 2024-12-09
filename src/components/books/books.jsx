@@ -17,14 +17,14 @@ import { Remove } from "./features/remove.jsx";
 import { CreateGlobalContext } from "../../context/globalContext.jsx";
 import { useContext } from "react";
 import { CreateGlobalAuthors } from "../../context/globalContextAuthors.jsx";
+import { Message } from "../messages/messages.jsx";
+import img from "../../img/book.svg";
 
 export function Livros() {
-  const { books, formMethods, createBookHandle } =
+  const { books, handleSubmit, register, createBookHandle } =
     useContext(CreateGlobalContext);
 
   const { authors } = useContext(CreateGlobalAuthors);
-
-  const { handleSubmit, register } = formMethods;
 
   return (
     <Center>
@@ -50,7 +50,7 @@ export function Livros() {
                 <input
                   id="pages"
                   type="number"
-                  {...register("pages")}
+                  {...register("pages", { required: true })}
                   placeholder="Digite a quantidade de páginas"
                 />
               </ItemModal>
@@ -64,7 +64,6 @@ export function Livros() {
                   {...register("author", { required: true })}
                   defaultValue={"selecione o autor"}
                 >
-                  <option value="Escolha o autor">Escolha o autor</option>
                   {authors.map((author) => {
                     return (
                       <option key={author.authorId} value={author.authorId}>
@@ -111,8 +110,9 @@ export function Livros() {
                     <td>
                       <p>
                         {
-                          authors.find((item) => item.authorId == book.authorId)
-                            ?.author
+                          authors.find(
+                            (author) => author.authorId == book.authorId
+                          )?.author
                         }
                       </p>
                     </td>
@@ -131,7 +131,7 @@ export function Livros() {
           </TableBox>
         ) : (
           <>
-            <h1>Nenhum livro foi encontrado</h1>
+            <Message image={img} section="Livro"/>
           </>
         )}
       </TableWrapper>

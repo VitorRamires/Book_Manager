@@ -28,6 +28,7 @@ export const ModalBox = styled(Dialog.Content)`
 
    h2{
     font-family: "Itim";
+    margin-bottom:35px;
   }
 `;
 
@@ -67,7 +68,7 @@ export const ItemModal = styled.div`
   justify-content: center;
   gap: 5px;
   width: 100%;
-  margin: 40px 0;
+  margin: 25px 0;
 
   input {
     width: 90%;
@@ -94,6 +95,7 @@ export const ModalActions = styled.div`
   gap: 10px;
   align-items: center;
   justify-content: start;
+  margin-top: 35px;
 
   button {
     width: 100px;

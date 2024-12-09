@@ -9,7 +9,7 @@ export function ContextGlobal({ children }) {
   const [books, setBooks] = useState([]);
 
   const [ids, setIds] = useState(0);
-  const formMethods = useForm({});
+  const { handleSubmit, register, reset } = useForm();
 
   useEffect(() => {
     const getBooks = JSON.parse(localStorage.getItem("books")) || [];
@@ -21,6 +21,7 @@ export function ContextGlobal({ children }) {
     }
   }, []);
 
+
   function createBookHandle(data) {
     setIds(ids + 1);
 
@@ -29,15 +30,17 @@ export function ContextGlobal({ children }) {
       pages: data.pages,
       id: ids,
       authorId: data.author,
+      date: new Date().toLocaleDateString("pt-BR"),
     };
 
     setBooks((state) => [...state, newBook]);
     localStorage.setItem("books", JSON.stringify([...books, newBook]));
+    reset();
   }
 
   return (
     <CreateGlobalContext.Provider
-      value={{ books, setBooks, formMethods, createBookHandle, ids }}
+      value={{ books, setBooks, createBookHandle, ids, handleSubmit, register }}
     >
       {children}
     </CreateGlobalContext.Provider>

@@ -88,7 +88,6 @@ export function Editar({ bookId }) {
                     onChange={handleInputChange}
                     defaultValue={"selecione o autor"}
                   >
-                    <option value="Escolha o autor">Escolha o autor</option>
                     {authors.map((author) => {
                       return (
                         <option key={author.author} value={author.authorId}>

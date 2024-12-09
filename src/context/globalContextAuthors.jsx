@@ -8,6 +8,7 @@ export function ContextAuthors({ children }) {
   const [authors, setAuthors] = useState([]);
   const [authorsId, setAuthorsId] = useState(0);
   const [authorNotExistMessage, setAuthorNotExistMessage] = useState("");
+  const [existedAuthor, setExistedAuthor] = useState();
 
   const formMethods = useForm({
     defaultValues: {
@@ -32,6 +33,7 @@ export function ContextAuthors({ children }) {
       author: data.authorName,
       email: data.email,
       authorId: authorsId,
+      date: new Date().toLocaleDateString("pt-BR"),
     };
 
     const authorExist = authors.some((item) => item.author == newAuthor.author);
@@ -55,6 +57,8 @@ export function ContextAuthors({ children }) {
         authorsId,
         authorNotExistMessage,
         setAuthorNotExistMessage,
+        existedAuthor, 
+        setExistedAuthor
       }}
     >
       {children}

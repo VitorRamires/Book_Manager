@@ -25,12 +25,10 @@ export const ModalBox = styled(Dialog.Content)`
   color: #ffffff;
   font-family: "Inter";
 
-   h2{
+  h2 {
     font-family: "Itim";
   }
-
 `;
-
 
 export const DialogTrigger = styled(Dialog.Trigger)`
   display: flex;
@@ -56,7 +54,7 @@ export const ItemModal = styled.div`
   padding: 10px 15px;
   border-radius: 5px;
 
-  h3{
+  h3 {
     font-family: "Itim";
     font-size: 1.2rem;
     font-weight: normal;
@@ -83,12 +81,22 @@ export const ViewInfo = styled.div`
   }
 `;
 
+export const ViewInfoDinamic = styled(ViewInfo).withConfig({
+  shouldForwardProp: (prop) => prop !== "autoPermission",
+})`
+  div:last-child {
+    background-color: ${(props) =>
+      props.autoPermission ? "#9A3030" : "#009405"};
+  }
+`;
+
 export const ModalActions = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: start;
   width: 100%;
+  margin-top: 35px;
 
   button {
     width: 100px;

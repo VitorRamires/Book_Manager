@@ -16,6 +16,8 @@ import { Edit } from "./features/edit.jsx";
 import { Preview } from "./features/view.jsx";
 import { Remove } from "./features/remove.jsx";
 import { CreateGlobalAuthors } from "../../context/globalContextAuthors.jsx";
+import { Message } from "../messages/messages.jsx";
+import img from "../../img/Author.svg";
 
 export function Authors() {
   const {
@@ -47,6 +49,7 @@ export function Authors() {
                 <label htmlFor="authorName">Autor</label>
                 <input
                   id="authorName"
+                  placeholder="Digite o nome do autor"
                   {...register("authorName", { required: true })}
                 />
               </ItemModal>
@@ -55,6 +58,7 @@ export function Authors() {
                 <input
                   id="email"
                   type="email"
+                  placeholder="Digite o email do autor"
                   {...register("email", { required: true })}
                 />
               </ItemModal>
@@ -100,7 +104,7 @@ export function Authors() {
             </tbody>
           </TableBox>
         ) : (
-          <h1>Nenhum autor foi encontrado</h1>
+          <Message image={img} section="Autor"/>
         )}
       </TableWrapper>
     </Center>
