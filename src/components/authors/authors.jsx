@@ -40,11 +40,12 @@ export function Authors() {
         <DialogTrigger onClick={resetForm}>
           Criar Autor <span>+</span>
         </DialogTrigger>
+
         <DialogOverlay>
           <ModalBox>
             <Dialog.Title>Crie seu autor</Dialog.Title>
             <Dialog.Description></Dialog.Description>
-            <form onSubmit={handleSubmit(createAuthorHandle)}>
+            <form onSubmit={handleSubmit(createAuthorHandle)} >
               <ItemModal>
                 <label htmlFor="authorName">Autor</label>
                 <input
@@ -104,7 +105,7 @@ export function Authors() {
             </tbody>
           </TableBox>
         ) : (
-          <Message image={img} section="Autor"/>
+          <Message image={img} section="Autor" />
         )}
       </TableWrapper>
     </Center>

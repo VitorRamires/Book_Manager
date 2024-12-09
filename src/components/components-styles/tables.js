@@ -133,6 +133,7 @@ export const TableWrapper = styled.div`
 
 export const TableBox = styled.table`
   width: 100%;
+  min-width: 700px;
   border-collapse: collapse;
   font-family:'inter';
 

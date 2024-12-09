@@ -7,7 +7,6 @@ export const CreateGlobalContext = createContext();
 
 export function ContextGlobal({ children }) {
   const [books, setBooks] = useState([]);
-
   const [ids, setIds] = useState(0);
   const { handleSubmit, register, reset } = useForm();
 
