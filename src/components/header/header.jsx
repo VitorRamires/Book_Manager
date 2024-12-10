@@ -8,7 +8,7 @@ export function Header() {
         <Menu>
           <h3>Gerenciador de livros</h3>
           <NavBox>
-            <NavLink to="/">Livros</NavLink>
+            <NavLink to="/" end>Livros</NavLink>
             <NavLink to="/autores">Autores</NavLink>
           </NavBox>
         </Menu>
