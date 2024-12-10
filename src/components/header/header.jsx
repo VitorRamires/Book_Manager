@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { NavHeader, NavBox, Menu } from "./header";
 
 export function Header() {
@@ -8,8 +8,8 @@ export function Header() {
         <Menu>
           <h3>Gerenciador de livros</h3>
           <NavBox>
-            <NavLink to="/" end>Livros</NavLink>
-            <NavLink to="/autores">Autores</NavLink>
+            <Link to="/">Livros</Link>
+            <Link to="/autores">Autores</Link>
           </NavBox>
         </Menu>
       </NavHeader>
